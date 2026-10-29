@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Clientes</title>
+</head>
+<body>
+    <h1>O Nosso Sistema</h1>
+    <button onclick="carregarClientes()">Ver Clientes</button>
+    
+    <!-- É aqui que a nossa lista vai aparecer -->
+    <ul id="lista-clientes"></ul>
+
+    <script>
+        // Isto é Javascript! A função que é chamada quando clica no botão.
+        function carregarClientes() {
+            // O comando fetch vai à nossa API buscar os dados
+            fetch('/clientes')
+                .then(resposta => resposta.json()) // Converte a resposta para JSON
+                .then(dados => {
+                    
+                    let listaHTML = document.getElementById('lista-clientes');
+                    listaHTML.innerHTML = ""; // Limpa a lista antes de adicionar
+                    
+                    // O SEU DESAFIO COMEÇA AQUI EM BAIXO
+                    // Lembra-se do ciclo 'for' no Python? No Javascript moderno usamos o '.forEach'
+                    dados.forEach(cliente => {
+                        // 1. Crie uma variável para armazenar o texto que quer mostrar na tela.
+                        if (cliente.status === "Pendente") {
+                            cliente.status = "Aguardando Pagamento";
+                        } else if (cliente.status === "Pago") {
+                            cliente.status = "Pagamento Confirmado";
+                        }
+                        let texto = "Olá senhor " + cliente.nome + ", gostariamos de informar que o Status é: " + cliente.status + ". Entre em contato para saber mais!"; // Substitua isto pelo texto que quer mostrar
+                        // Exemplo de f-string em JS (usamos crases ` ` em vez de aspas e $ em vez de f):
+                        // let texto = `Nome: ${cliente.nome} - Status: ${cliente.status}`;                                   
+                        // 2. Adicione esse texto à nossa listaHTML. (Apenas apague os // da linha abaixo e ajuste a sua variável):
+                        listaHTML.innerHTML += `<li> ${texto} </li>`;
+                    });
+                    
+                });
+        }
+    </script>
+</body>
+</html>
