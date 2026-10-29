@@ -26,7 +26,7 @@ Construí tudo de forma autônoma, escrevendo linha por linha, pesquisando a sol
 Se você quiser testar o código na sua máquina, siga os passos abaixo:
 1. Clone este repositório:
    ```bash
-   git clone [https://github.com/SEU_USUARIO/sistema-clientes-flask.git](https://github.com/SEU_USUARIO/sistema-clientes-flask.git)
+   git clone https://github.com/santspy/sistema-clientes-flask.git
    ````
 
   Instale o Flask:
