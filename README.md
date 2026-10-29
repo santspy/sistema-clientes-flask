@@ -8,6 +8,8 @@ Em vez de apenas esperar pela próxima etapa ou pelo teste técnico de braços c
 
 Construí tudo de forma autônoma, escrevendo linha por linha, pesquisando a solução para os erros de sintaxe, entendendo a lógica de rotas e fazendo o Backend conversar com o Frontend. Ainda estou no início da minha jornada codando realmente sozinho, mas este código representa o meu comprometimento e a minha vontade em aprender as bases da programação de verdade, fugindo do copia e cola.
 
+Obs: utilizei a IA apenas para me dar exercícios e me ENSINAR os comandos, sintaxe, etc. de cada linguagem, ou seja, aprendi sobre a estrutura do Front, Back e Banco de Dados (o básico, mas aprendi).
+
 ## Tecnologias que Aprendi e Utilizei
 
 * **Backend:** Python + Flask (Criação de uma API REST para servir os dados).
